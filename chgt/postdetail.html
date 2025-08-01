@@ -10,6 +10,12 @@
     <!-- remix icon -->
     <link rel="stylesheet" href="/chgt/assets/fonts/remixicon/remixicon.css">
     <style>
+        .content-main{
+            border-radius: 0px;
+            background: #fdfcfc;
+            box-shadow: 5px 5px 10px #f8f7f7,
+                        -5px -5px 10px #ffffff;
+        }
         .card-image {
             width: 45px;
             height: 45px;
@@ -18,7 +24,7 @@
             object-fit: cover;
             flex-shrink: 0;
         }
-        
+
         @media (min-width: 768px) {
             .content-main {
                 width: 900px !important;
@@ -37,7 +43,7 @@
             .sidebar-custom {
                 width: 100% !important;
             }
-            
+
             .card-image {
                 width: 45px !important;
                 height: 45px !important;
@@ -55,28 +61,17 @@
         <div class="d-md-flex gap-2 mx-md-auto mt-md-1 pt-md-1 m-3 justify-content-center">
             <!-- content -->
             <div class="content-main px-3">
-                <div>
-                    <p>
-                        Để nâng cao hơn nữa chất lượng dịch vụ & chăm sóc khách hàng Cứu Hộ Giao Thông Xuân Hạ cũng đã triển khai dịch vụ cứu hộ giao thông sửa chữa lưu động, để có thể đáp ứng nhu cầu dịch vụ của khách hàng mọi lúc mọi nơi.
-                        <br><br>
-                        Đặc biệt, 2 năm trở lại đây, Cứu Hộ Giao Thông Xuân Hạ đã đẩy mạnh cho hoạt động “Sửa chữa xe lưu động” trên toàn quốc nhằm kịp thời hỗ trợ người dùng, vừa tiết kiệm thời gian vừa cứu hộ nhanh chóng khi xe hư hỏng.
-                        <br><br>
-                        <h4>Dịch Vụ Của Chúng Tôi</h4>
-                        <br>
-                        <ul>
-                            <li>Cứu Hộ Giao Thông</li>
-                            <li>Làm Bảo Hiểm Xe</li>
-                            <li>Mua Bán Ô Tô Đã Qua Sử Dụng</li>
-                        </ul>
-                        <br>
-                        Chương trình với tiêu chí “Luôn phục vụ tận tâm và chuyên nghiệp 24/24” đã nhận được sự ủng hộ nhiệt tình từ khách hàng, đã phục vụ hơn 850 trường hợp cứu hộ giao thông khẩn cấp.
-                        <br><br>
-                        Đội ngũ cố vấn và các chuyên gia từ Nhật Bản của Cứu Hộ Giao Thông Xuân Hạ còn thường xuyên đến tận nơi, trực tiếp tư vấn cách sử dụng xe, chẩn đoán, phòng tránh hư hỏng bằng các thiết bị chẩn đoán chuyên dùng.
-                        <br><br>
-                        Với khẩu hiệu “Cứu Hộ Giao Thông Xuân Hạ luôn luôn đồng hành cùng bạn”,Cứu Hộ Giao Thông Xuân Hạ mong muốn sẽ luôn đồng hành cùng những thành công của khách hàng.
-                        <br><br>
-                        Với đợi ngũ thợ lành nghề, đội xe cứu hộ luôn túc trực sẳn sàng, Quý khách hoàn toàn có thể yên tâm, dù đang ở nơi nào, bất cứ khi nào, chỉ cần nhấc máy gọi số: 0988.42.46.46 – 092.854.2222
-                    </p>
+                <div class="content-header text-center mb-4">
+                    <a href="/chgt/postdetail.html" style="text-decoration: none; color: grey; font-weight: bold;">
+                        Tên chủ đề bài viết
+                    </a>
+                    <h1 class="fw-bold">Tên bài viết</h1>
+                    <!--short entry divider -->
+                    <hr class="border-secondary my-2" style="width: 20px; margin: auto; border-width: 3px;">
+                </div>
+                <div class="content-body">
+                    <img src="/chgt/assets/images/xe.jpg" alt="Post Image" class="img-fluid mb-3">
+                    <p class="text-muted">Nội dung bài viết</p>
                 </div>
             </div>
             <!-- divider -->
