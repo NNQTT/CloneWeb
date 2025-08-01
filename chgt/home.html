@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="/chgt/assets/css/styles.css">
     <link rel="stylesheet" href="/chgt/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/chgt/assets/css/animate.css">
+    <link rel="stylesheet" href="/chgt/assets/css/slick.css">
     <!-- remix icon -->
     <link rel="stylesheet" href="/chgt/assets/fonts/remixicon/remixicon.css">
-    
+
     <title>Home</title>
     <style>
         .top-bar {
@@ -42,25 +43,152 @@
         .right-icons a:hover {
             color: #ffcc00;
         }
+
+        .nav .nav-link {
+            color: black !important;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .nav .nav-link:hover,
+        .nav .nav-link:focus {
+            color: white !important;
+            background-color: #BA2020 !important;
+        }
+
+        .search-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .search-icon {
+            background-color: #00008b;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-search {
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            background-color: #d26e4b;
+            color: white;
+        }
+
+        .btn-search:hover {
+            background-color: #a8583c;
+            color: white;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .search-box {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 7px;
+            display: none;
+            min-width: 220px;
+            z-index: 100;
+        }
+
+        .search-container:hover .search-box,
+        .search-container:focus-within .search-box {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
+    <script src="/chgt/assets/js/bootstrap.min.js"></script>
+    <script src="/chgt/assets/js/slick.min.js"></script>
 </head>
 
 <body>
     <div class="container">
+        <!-- top-bar -->
         <div class="top-bar">
             <div class="left-info">
                 <span><i class="ri-map-pin-fill"></i> HUYỆN CHƯ PĂH, TỈNH GIA LAI</span>
-                <span><i class="fas fa-clock"></i> 24/24</span>
-                <span><i class="fas fa-phone"></i> 0988.42.46.46 - 092.854.2222</span>
+                <span><i class="ri-time-line"></i> 24/24</span>
+                <span><i class="ri-phone-fill"></i> 0988.42.46.46 - 092.854.2222</span>
             </div>
             <div class="right-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+                <a href="#"><i class="ri-google-fill"></i></a>
+                <a href="#"><i class="ri-twitter-x-fill"></i></a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+            </div>
+        </div>
+
+        <!-- navbar -->
+        <nav class="navbar d-flex justify-content-around">
+            <img src="/chgt/assets/images/logo.png" alt="" width="30" height="24" class="d-flex align-text-top" />
+            <ul class="nav text-uppercase fw-bold" style="color: black;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cứu hộ giao thông</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Làm bảo hiểm xe
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mua, bán ô tô đã qua sử dụng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tin tức mới</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Liên hệ</a>
+                </li>
+            </ul>
+            <div class="search-container">
+                <span class="search-icon"><i class="ri-search-line"></i></span>
+                <div class="search-box bg-white shadow rounded p-2">
+                    <form class="d-flex">
+                        <input type="text" class="form-control me-2" placeholder="Tìm kiếm...">
+                        <button class="btn-search" type="submit"><i class="ri-search-line"></i></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="js-slick-carousel u-slick"
+            data-arrows-classes="d-none d-lg-inline-block u-slick__arrow-classic u-slick__arrow-centered--y rounded-circle"
+            data-arrow-left-classes="fas fa-arrow-left u-slick__arrow-classic-inner u-slick__arrow-classic-inner--left ml-lg-2 ml-xl-4"
+            data-arrow-right-classes="fas fa-arrow-right u-slick__arrow-classic-inner u-slick__arrow-classic-inner--right mr-lg-2 mr-xl-4">
+            <div class="js-slide bg-img-hero-center" style="background-image: url(/chgt/assets/images/xe.jpg);">
+                <div class="space-5">
+                </div>
+            </div>
+            <div class="js-slide bg-img-hero-center" style="background-image: url(/chgt/assets/images/xe.jpg);">
+                <div class="space-5">
+                </div>
+            </div>
+            <div class="js-slide bg-img-hero-center" style="background-image: url(/chgt/assets/images/xe.jpg);">
+                <div class="space-5">
+                </div>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
