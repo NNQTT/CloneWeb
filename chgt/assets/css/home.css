@@ -1,3 +1,4 @@
+/* top-bar */
 .top-bar {
     color: white;
     font-family: Arial, sans-serif;
@@ -28,13 +29,19 @@
     color: #ffcc00;
 }
 
-.nav .nav-link {
+/* nav-bar */
+
+.navbar-nav .nav-link {
     color: black !important;
     transition: color 0.2s, background 0.2s;
 }
 
-.nav .nav-link:hover,
-.nav .nav-link:focus {
+.navbar-nav li {
+    margin: 0px 10px 0px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
     color: white !important;
     background-color: #BA2020 !important;
 }
@@ -95,6 +102,8 @@
     }
 }
 
+/* component-under-carousel */
+
 .under-carousel {
     background-color: #000;
     padding: 20px;
@@ -121,6 +130,8 @@
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
 }
+
+/* frame-1 */
 
 .frame-1 {
     display: flex;
@@ -155,6 +166,7 @@
     font-size: x-large;
 }
 
+/* frame-2 */
 .frame-2 {
     height: fit-content;
     position: relative;
@@ -197,6 +209,7 @@
     font-weight: bold;
 }
 
+/* frame-3 */
 .frame-3 {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -274,6 +287,7 @@
     flex-grow: 1;
 }
 
+/* frame-4 */
 .frame-4 {
     background-image: url('/chgt/assets/images/footer-background-abstract-beach.png');
 }
@@ -313,6 +327,7 @@
     color: #ddd;
 }
 
+/* frame-5 */
 .testimonial-container {
     background-color: #f5f5f5;
     border-radius: 10px;
@@ -353,6 +368,8 @@
     border-radius: 50%;
 }
 
+/* frame-6 */
+
 .news-item {
     display: flex;
     gap: 10px;
@@ -375,6 +392,8 @@
     font-size: 14px;
     color: #333;
 }
+
+/* footer */
 
 .footer {
     background: #003366;
@@ -441,4 +460,273 @@
 
 .footer-icons a:hover {
     color: #ffcc00;
+}
+
+
+/* --- Responsive --- */
+
+/* Navbar và top-bar */
+@media (max-width: 991px) {
+    .navbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px;
+    }
+
+    .nav {
+        flex-direction: column !important;
+        width: 100%;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .under-carousel {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .top-bar {
+        flex-direction: column;
+        font-size: 12px;
+        padding: 6px 5px;
+        gap: 5px;
+    }
+
+    .navbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .nav {
+        flex-direction: column !important;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .under-carousel {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .btn-under-carousel {
+        width: 100%;
+        font-size: 15px;
+        padding: 10px 0;
+    }
+}
+
+/* Frame-1 */
+@media (max-width: 767px) {
+    .frame-1 {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .card {
+        width: 90vw;
+        min-width: 180px;
+    }
+
+    .card-img {
+        height: 100px;
+    }
+}
+
+/* Frame-2 */
+@media (max-width: 991px) {
+    .frame-2 .row {
+        flex-direction: column;
+    }
+
+    .frame-2 .col-md-6 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .frame-2 img.img-fluid {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Frame-3 dịch vụ */
+@media (max-width: 991px) {
+    .frame-3 .row {
+        flex-wrap: wrap;
+    }
+
+    .frame-3 .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .frame-3 .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .frame-3 .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .service-card img {
+        height: 130px;
+    }
+}
+
+/* Frame-4 dịch vụ box */
+@media (max-width: 991px) {
+    .frame-4 .row {
+        flex-wrap: wrap;
+    }
+
+    .frame-4 .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .frame-4 .row {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .frame-4 .col-md-3,
+    .frame-4 .col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .service-box {
+        padding: 20px 10px;
+    }
+}
+
+/* Frame-5 testimonial */
+@media (max-width: 991px) {
+    .testimonial-container {
+        padding: 20px 5px;
+    }
+
+    .carousel-item .d-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px;
+    }
+
+    .carousel-item .col-md-5 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-avatar {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Frame-6 news */
+@media (max-width: 767px) {
+    .news-item {
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+    }
+
+    .news-item img {
+        width: 100%;
+        height: 80px;
+    }
+}
+
+/* Footer */
+@media (max-width: 991px) {
+    .footer {
+        padding: 20px 5px;
+    }
+
+    .footer-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .map iframe {
+        height: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer {
+        padding: 15px 2px;
+        font-size: 14px;
+    }
+
+    .footer .row>div[class^="col-"] {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        padding: 8px 2px;
+    }
+}
+
+/* Ẩn scroll ngang nếu có */
+body {
+    overflow-x: hidden;
+}
+
+/* Sticky Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    /* hoặc màu nền bạn muốn */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
